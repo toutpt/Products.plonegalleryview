@@ -1,0 +1,7 @@
+# ToDo
+# plonegalleryview things to do:
+
+   * use lighbox for zooming images
+   * set the image counter in carousel automaticly in timed carousel view
+   * on change the size of gallery, select the last showig image
+   * make the rotation of the carousel faster 

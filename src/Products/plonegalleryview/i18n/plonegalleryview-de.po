@@ -1,0 +1,29 @@
+# German translation of plonegalleryview.
+# Maik Derstappen - Derstappen IT Consulting <maik.derstappen@derstappen-it.de>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.3b\n"
+"POT-Creation-Date: 2007-06-24 15:54+0000\n"
+"PO-Revision-Date: 2007-06-24 23:05+0000\n"
+"Last-Translator: Maik Derstappen <maik.derstappen@derstappen-it.de>\n"
+"Language-Team: German <info@derstappen-it.de>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: de\n"
+"Language-Name: Deutsch\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: plonegalleryview\n"
+
+msgid "show_big_images"
+msgstr "zeige große Bilder"
+
+msgid "show_small_images"
+msgstr "zeige kleine Bilder"
+
+msgid "Smooth Gallery - large - manual with carousel"
+msgstr "Smooth Gallery - groß - manuell mit Karussell"
+
+msgid "Smooth Gallery - manual with carousel"
+msgstr "Smooth Gallery - manuell mit Karussell"

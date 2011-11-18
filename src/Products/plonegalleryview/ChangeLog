@@ -1,0 +1,23 @@
+2007-10-11    Maik Derstappen	<maik.derstappen@derstappen-it.de>
+              - fixed migrate.py import error
+              - fixed js error when carousel is disabled
+              - improve js code tho set the right opacity values
+              - rename properties to pgv_sg_<propertyname>
+              - add properties for enable embeded links
+              - test it with plone 3.0.2, it works fine ;-) 
+
+2007-07-24    Héctor Velarde <hvelarde@jornada.com.mx>
+v0.3.3        - Spanish translation
+
+2007-07-16    Maik Derstappen	<maik.derstappen@derstappen-it.de>
+v0.3.2        - fix the flicker in IE6 when the images change in the main slideshow window, thx to Mike Pearce ;-) 
+
+2007-07-01    Maik Derstappen	<maik.derstappen@derstappen-it.de>
+v0.3.1        - changed the size of slideInfoZone to show 2 lines of description
+              - some fixes in css code  
+
+2007-06-29    Maik Derstappen	<maik.derstappen@derstappen-it.de>
+v0.3          - fixed misspelled words in all views 
+              
+2007-06-24    Maik Derstappen	<maik.derstappen@derstappen-it.de>
+v0.3b         - first public release 

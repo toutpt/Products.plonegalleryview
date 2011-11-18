@@ -1,0 +1,216 @@
+/* <dtml-var "enableHTTPCompression(request=REQUEST, debug=1, css=1)"> (this is for http compression) */
+/* <dtml-with base_properties> (do not remove this :) */
+/* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+
+
+/* 
+################################################################
+# plonegalleryview global styles for SmoothGallery Based Views #
+################################################################
+
+most of them overwrites the defaults in original jd.gallery.css
+----------------------------------------------------------------
+*/
+
+
+
+
+# fix the flicker in IE6 when the images change in the main slideshow window, thx to Mike Pearce ;-)
+html{
+  filter: expression(document.execCommand("BackgroundImageCache", false, true));
+}
+
+#myCarousel
+{
+    text-align: center;
+    margin: 0px 0px 10px 0px;
+    height:165px;
+    overflow:hidden;
+    background: #000000;
+}
+
+#myGallery
+{
+	width: none !important;
+	height: none !important;
+	z-index:0 !important;
+}
+
+.jdGallery div.carouselContainer
+{
+	position: absolute;
+	height: 180px;
+	width: 100%;
+	z-index: 10;
+	margin: 0px;
+	left: 0;
+	top: 0;
+}
+
+.jdGallery a.carouselBtn
+{
+	position: absolute;
+	bottom: 10;
+	right: 30px;
+	height: 20px;
+	width: 100px; background: url('pgv_sg_carousel_btn.gif') no-repeat;
+	text-align: center;
+	padding: 0 10px;
+	font-size: 13px;
+	background: #333;
+	color: #fff;
+	cursor: pointer;
+}
+
+.jdGallery .carousel
+{
+	position: absolute;
+	width: 100%;
+	margin: 0px;
+	left: 0;
+	top: 0;
+	height: 165px;
+	background: #333;
+	color: #fff;
+	text-indent: 0;
+	overflow: hidden;
+}
+
+.jdGallery .carousel .carouselWrapper
+{
+	position: absolute;
+	width: 100%;
+	height: 144px;
+	top: 10px;
+	left: 0;
+	overflow: hidden;
+}
+
+.jdGallery .carousel .carouselInner
+{
+	position: relative;
+}
+
+.jdGallery .carousel .carouselInner .thumbnail
+{
+	cursor: pointer;
+	background: #000;
+	background-position: center center;
+	float: left;
+	border: solid 1px #fff;
+}
+
+.jdGallery .carousel .label
+{
+	font-size: 13px;
+	position: absolute;
+	bottom: 5px;
+	left: 10px;
+	padding: 0;
+	margin: 0;
+}
+
+.jdGallery .carousel .label .number
+{
+	color: #b5b5b5;
+}
+
+.jdGallery .loadingElement
+{
+	background-image: url('pgv_sg_loading-bar-black.gif');
+}
+
+.jdGallery a.left
+{
+	background: url('pgv_sg_fleche1.png') no-repeat center left;
+}
+
+* html .jdGallery a.left { background: url('pgv_sg_fleche1.gif') no-repeat center left; }
+
+.jdGallery a.right
+{
+	background: url('pgv_sg_fleche2.png') no-repeat center right;
+}
+
+* html .jdGallery a.right { background: url('pgv_sg_fleche2.gif') no-repeat center right; }
+
+.jdGallery .slideInfoZone h2{
+    font-size:100%;
+}
+
+.jdGallery .slideInfoZone p{
+    font-size:90%;
+    margin: 0px;
+    padding: 3px;
+    line-height:1em;
+    text-align: justify;
+}
+
+.jdGallery .slideInfoZone
+{
+	position: absolute;
+	z-index: 10;
+	width: 100%;
+	margin: 0px;
+	left: 0;
+	bottom: 0;
+	height: 5em;
+	background: #333;
+	color: #fff;
+	text-indent: 0;
+	overflow: hidden;
+}
+
+
+/* 
+################################################################
+# plonegalleryview - simpletimed                               #
+################################################################
+*/
+
+.pgv_sg_simpletimed_view #myGallery{
+	width: 510px;
+	height: 426px;
+}
+.pgv_sg_simpletimed_big_view #myGallery{
+	width: 830px;
+	height: 700px;
+}
+
+
+/* 
+################################################################
+# plonegalleryview - carouseltimed                             #
+################################################################
+*/
+
+.pgv_sg_carouseltimed_view #myGallery,
+.pgv_sg_carousel_view #myGallery{
+	width: 510px;
+	height: 426px;
+}
+.pgv_sg_carouseltimed_view #myCarousel,
+.pgv_sg_carousel_view #myCarousel{
+	width: 512px;
+}
+.pgv_sg_carouseltimed_view .jdGallery a.carouselBtn,
+.pgv_sg_carousel_view .jdGallery a.carouselBtn{
+    display: none;
+}
+
+
+.pgv_sg_carouseltimed_big_view #myGallery,
+.pgv_sg_carousel_big_view #myGallery{
+	width: 830px;
+	height: 700px;
+}
+.pgv_sg_carouseltimed_big_view #myCarousel,
+.pgv_sg_carousel_big_view #myCarousel{
+	width: 832px;
+}
+.pgv_sg_carouseltimed_big_view .jdGallery a.carouselBtn,
+.pgv_sg_carousel_big_view .jdGallery a.carouselBtn{
+    display: none;
+}
+
+/* </dtml-with> */

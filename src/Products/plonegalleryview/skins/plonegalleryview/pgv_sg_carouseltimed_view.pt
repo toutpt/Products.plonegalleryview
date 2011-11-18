@@ -1,0 +1,85 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="plonegalleryview">
+
+<body>
+
+<div metal:fill-slot="main"
+     tal:define="view context/@@ploneGalleryView">
+
+  <tal:main-macro metal:define-macro="main" tal:omit-tag="">
+    <div tal:define="albumResult python:here.atctListAlbum(images=1, folders=1, subimages=0, others=0);
+                     images albumResult/images;
+                     albums albumResult/folders;"
+         class="pgv_sg_carouseltimed_view"> 
+
+      <h1 tal:content="object_title">
+        Title or id
+      </h1>
+
+      <div metal:use-macro="here/document_byline/macros/byline">
+        Get the byline - contains details about author and modification date.
+      </div>
+           
+      <p class="documentDescription"
+             tal:content="here/Description"
+             tal:condition="here/Description">
+        Description
+      </p>
+                     
+
+      <tal:SmoothGalleryJSCode tal:replace="structure python: view.genPGVSmoothGalleryJSCode(showCarousel='true')" />
+
+      <div align="center">
+        <a href="pgv_sg_carouseltimed_big_view"
+           class="GSizeLink"
+           i18n:translate="show_big_images">show big images</a>
+        <br />
+        <br /> 
+            <div id="myCarousel" class="jdGallery"></div>        
+        	<div id="myGallery" class="small">
+            	<tal:loop repeat="result images">
+            	  <div class="imageElement">
+      	              <h3 tal:content="result/Title"> Item 1 Title </h3>
+            		  <p tal:content="result/Description">Item 1 Description</p>
+                      <a tal:attributes="href python: result.absolute_url() + '/image_large';" title="zoom" class="open" target="_blank" rel="lightbox"></a>
+                      <img tal:attributes="alt python: result.Title() + ' - thumbnail';
+                  			  			   title python: '';
+                  						   class python: 'thumbnail';
+                  		  				   src python: result.absolute_url() + '/image_thumb';" />                  
+            		  <img tal:attributes="alt python: result.Title() + ' - small';
+                    					   title python: '';
+                    					   class python: 'full';
+                    					   src python: result.absolute_url() + '/image_preview';" />   						       
+                  </div>
+            	</tal:loop>              
+            
+            	<tal:loop repeat="album albums">
+                    <tal:vars define="images python:album.atctListAlbum(subimages=1)['subimages'];">
+            	        <tal:loop repeat="result images">
+            	            <div class="imageElement">
+                	            <h3 tal:content="result/Title"> Item 1 Title </h3>
+                      		    <p tal:content="result/Description">Item 1 Description</p>
+                      		    <a tal:attributes="href python: result.absolute_url() + '/image_large';" title="zoom" class="open" target="_blank" rel="lightbox"></a>
+                      		  	<img tal:attributes="alt python: result.Title + ' - thumbnail';
+                  			  			             title python: '';
+                  						             class python: 'thumbnail';
+                  		  				             src python: result.getURL() + '/image_thumb';" />
+                      		    <img tal:attributes="alt python: result.Title + ' - small';
+                      			  			         title python: '';
+                      						         class python: 'full';
+                      		  				         src python: result.getURL() + '/image_preview';" />
+                            </div>
+              	        </tal:loop>
+                    </tal:vars>
+                </tal:loop>   
+            </div>      
+        </div>
+        <div class="visualClear"><!-- clears floating areas --></div> 
+    </div>
+  </tal:main-macro>
+</div>
+   
+</body>
+</html> 
